@@ -13,17 +13,14 @@ export default function AddTaskForm({ onAdd }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex gap-2 mb-6">
+    <form onSubmit={handleSubmit} className="input-wrapper">
       <input
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         placeholder="New task..."
-        className="flex-1 border rounded px-3 py-2 text-sm"
+        className="task-input"
       />
-      <button
-        type="submit"
-        className="bg-green-700 text-white px-4 py-2 rounded text-sm hover:bg-green-800"
-      >Add</button>
+      <button type="submit" className="add-btn">Add</button>
     </form>
   );
 }

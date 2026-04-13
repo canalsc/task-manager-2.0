@@ -2,16 +2,13 @@
 
 export default function TaskStats({ total, completed, active, onClearCompleted }) {
   return (
-    <div className="flex items-center justify-between mb-4 p-3 bg-gray-50 rounded">
-      <div className="flex gap-4 text-sm text-gray-600">
-        <span><span className="font-bold text-gray-900">{total}</span> total</span>
-        <span><span className="font-bold text-green-700">{completed}</span> done</span>
-        <span><span className="font-bold text-blue-700">{active}</span> active</span>
+    <div className="flex items-center justify-between mt-3">
+      <div className="stats-bar">
+        <span className="stat-pill">{total} total</span>
+        <span className="stat-pill">{completed} done</span>
+        <span className="stat-pill">{active} active</span>
       </div>
-      <button
-        onClick={onClearCompleted}
-        className="text-sm text-red-600 hover:underline"
-      >
+      <button onClick={onClearCompleted} className="clear-btn">
         Clear completed
       </button>
     </div>
